@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :categories, only: :index, param: :name
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :categories, only: :index, param: :name do
+    resources :recipes, only: [:index]
+  end
+
+  get 'recipes/:id', to: 'recipes#show'
 end
