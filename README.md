@@ -8,13 +8,15 @@ Fetch API data from https://themealdb.com/ for categories, category recipes & re
 
   This app need ruby version 2.5.1 & rails 6.1.7. Steps to run the application,
 
+  * Few ENV variables to be set are in .env file
+
   * run `bundle install` from within the folder
 
   * Start rails server using the command `rails s`
 
 
 ## APIs:
-* The categories & recipes APIs are paginated. The per_page has been set to 10. It can be changed in `.env` or by setting per_page value in `config/initializers/pagy.rb` file. The paginated APIs have a metadata i.e. first_page_url, next_page_url, last_page_url, total_pages,
+* The categories & recipes APIs are paginated. The per_page has been set to 10. It can be changed in `.env` or by setting per_page value in `config/initializers/pagy.rb` file. The paginated APIs have a metadata i.e. first_page_url, next_page_url, last_page_url, total_pages.
 
 * From chrome/firefox browser we can make requests to the server
   - for categories list: `http://localhost:3000/categories`
@@ -36,44 +38,25 @@ Fetch API data from https://themealdb.com/ for categories, category recipes & re
     ex: `http://localhost:3000/recipes/52878`
 
 
-Few decisions that I made,
-- Did not use API versioning as there weren't multiple devices to support, do not see much breaking changes that could be introduced.
+Few decisions,
+- Did not use API versioning as there weren't multiple devices to support, do not see much breaking changes that could be introduced
 - No much exception handling, as the API either responds with right data or an empty/null data
 - No authentication as the API are publicly available
+- Considered only JSON request & response
+- Used services design pattern to fetch the data
+- Used jbuilder seralizer to format the data (serializer pattern)
 
 
 
+## Sample App has been deployed to Heroku. Few samples of API links for the deployed app:
+- categories API:
+  https://recipetechtest.herokuapp.com/categories
+  https://recipetechtest.herokuapp.com/categories?page=2
 
+- Category recipes:
+  https://recipetechtest.herokuapp.com/categories/dessert/recipes
+  https://recipetechtest.herokuapp.com/categories/dessert/recipes?page=2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Recipe:
+  https://recipetechtest.herokuapp.com/recipes/52892
+  https://recipetechtest.herokuapp.com/recipes/52928
