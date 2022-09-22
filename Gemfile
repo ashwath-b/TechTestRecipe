@@ -15,6 +15,8 @@ gem 'puma', '~> 5.0'
 
 gem 'jbuilder', '~> 2.5'
 
+gem 'pagy', '~> 5.10'
+
 gem 'webmock'
 gem 'vcr'
 

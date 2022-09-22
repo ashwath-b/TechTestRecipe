@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = MealDb.new.filter_by(params[:category_name])
+    @pagy, @recipes = pagy_array(MealDb.new.filter_by(params[:category_name]))
+    @meta = pagy_metadata(@pagy)
   end
 
   def show

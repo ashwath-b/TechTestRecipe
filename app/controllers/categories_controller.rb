@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = MealDb.new.categories_list
+    @pagy, @categories = pagy_array(MealDb.new.categories_list)
+    @meta = pagy_metadata(@pagy)
   end
 end

@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 21 Sep 2022 13:08:53 GMT
+      - Thu, 22 Sep 2022 03:38:57 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -38,13 +38,13 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sO0Zn2w8YBAPo6ehITRCFLSPmx9%2BCXZXYlhdlefVzjYe94xZS%2BXc3blEhjJGBr%2BXhTJLIl%2BZ6dsBWztpJYwOQmrxG5ywePisXGXeCJIh2eQ1S8YBuYEhDPZvGyXKtrTlL0v43kiWJKzsZWJN"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2Fl0oO5OB2cVwHJKygIkRAp6i7gOBbfkKtf%2FZOqqcvFgz3qImglROF5EijCq%2BALMMaafoI5oeEqwtaafPWnJuE9lulYsoocRgofW65%2FfgH0yMukoXZHxH44sJZnW4hHtLASomL2XfDbhlgIW"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 74e308379a682e58-BOM
+      - 74e802bb6b9c0e2c-BOM
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -89,5 +89,5 @@ http_interactions:
         Beef","strMealThumb":"https:\/\/www.themealdb.com\/images\/media\/meals\/1529443236.jpg","idMeal":"52950"},{"strMeal":"Traditional
         Croatian Goulash","strMealThumb":"https:\/\/www.themealdb.com\/images\/media\/meals\/n1hcou1628770088.jpg","idMeal":"53057"},{"strMeal":"Vegetable
         Shepherd''s Pie","strMealThumb":"https:\/\/www.themealdb.com\/images\/media\/meals\/w8umt11583268117.jpg","idMeal":"53000"}]}'
-  recorded_at: Wed, 21 Sep 2022 13:08:53 GMT
+  recorded_at: Thu, 22 Sep 2022 03:38:57 GMT
 recorded_with: VCR 6.0.0

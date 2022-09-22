@@ -6,7 +6,6 @@ class MealDb
   FORMAT = '/json'
   VERSION = '/v1/1'
 
-
   def categories_list
     uri = URI(category_url)
     res = Net::HTTP.get_response(uri)
@@ -16,7 +15,7 @@ class MealDb
   def filter_by(category_name)
     uri = URI(filter_url(category_name))
     res = Net::HTTP.get_response(uri)
-    JSON.parse(res.body)['meals'] || nil if res.is_a?(Net::HTTPSuccess)
+    JSON.parse(res.body)['meals'] || [] if res.is_a?(Net::HTTPSuccess)
   end
 
   def get_recipe(meal_id)
