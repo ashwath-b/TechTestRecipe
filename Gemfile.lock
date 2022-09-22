@@ -68,6 +68,7 @@ GEM
     crack (0.4.4)
     crass (1.0.6)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
     erubi (1.11.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -176,6 +177,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  dotenv
   jbuilder (~> 2.5)
   listen (~> 3.3)
   pagy (~> 5.10)
