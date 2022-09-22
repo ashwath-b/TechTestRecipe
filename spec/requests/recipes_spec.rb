@@ -11,10 +11,18 @@ RSpec.describe 'Recipes', type: :request do
     end
   end
 
+  describe 'GET /index for invalid page' do
+    it 'returns empty page', :vcr => true do
+      get '/categories/beef/recipes?page=10'
+      expect(response).to have_http_status(:success)
+      expect(JSON.parse(response.body)['recipes']).to eq nil
+    end
+  end
+
   describe 'GET /show' do
     it 'returns http success', :vcr => true  do
       get '/recipes/52874'
       expect(response).to have_http_status(:success)
     end
-  end 
+  end
 end

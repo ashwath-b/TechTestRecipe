@@ -18,4 +18,12 @@ RSpec.describe 'Categories', type: :request do
       expect(JSON.parse(response.body)['categories'].count).to eq 4
     end
   end
+
+  describe 'GET /index for invalid page' do
+    it 'returns empty page', :vcr => true do
+      get '/categories?page=5'
+      expect(response).to have_http_status(:success)
+      expect(JSON.parse(response.body)['categories'].count).to eq 0
+    end
+  end
 end
